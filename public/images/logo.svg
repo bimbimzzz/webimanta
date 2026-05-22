@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Blue Square Background -->
+  <rect width="500" height="500" fill="#004aad" />
+  
+  <!-- Yellow Shape with Cut-ins -->
+  <polygon points="151,81 54,250 152,418 348,418 445,249 412,193 317,358 286,360 247,291 208,359 172,359 109,250 172,139 229,139 165,250 190,292 279,139 335,139 275,242 301,289 384,144 347,81" fill="#f1fd00" />
+</svg>
