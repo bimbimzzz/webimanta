@@ -163,7 +163,7 @@
                 </div>
                 <div class="about-content">
                     <span class="about-tag">Siapa Kami</span>
-                    <h2 class="about-title">Dari Pelosok untuk Indonesia: Menembus Batas Digital</h2>
+                    <h2 class="about-title">Dari Penjuru Pelosok untuk Indonesia: Menembus Batas Digital</h2>
                     <p class="about-desc">
                         Webimanta Solusi Digital lahir dari visi untuk meratakan akses teknologi di seluruh Indonesia.
                         Kami percaya bahwa setiap bisnis, baik UMKM di daerah maupun korporasi menengah di kota besar,
@@ -728,10 +728,7 @@
             <div class="map-wrapper">
                 <iframe
                     src="https://maps.google.com/maps?q=Webimanta+-+Jasa+Pembuatan+Website+%26+Aplikasi+Semarang&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="350"
-                    allowfullscreen=""
-                    loading="lazy"
+                    width="100%" height="350" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     title="Lokasi Webimanta Solusi Digital - Semarang, Jawa Tengah, Indonesia">
                 </iframe>
