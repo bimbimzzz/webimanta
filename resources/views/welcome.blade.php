@@ -103,13 +103,8 @@
                 <a href="#keunggulan" class="nav-link">Keunggulan</a>
                 <a href="#kontak" class="nav-link">Kontak</a>
                 <a href="https://wa.me/628563020305?text=Halo%20Webimanta,%20saya%20ingin%20berkonsultasi%20mengenai%20solusi%20digital%20bisnis%20saya."
-                    target="_blank" class="btn btn-primary btn-sm nav-cta-mobile">Konsultasi Sekarang</a>
+                    target="_blank" class="btn btn-primary btn-sm" style="margin-left: 0.5rem;">Konsultasi Sekarang</a>
             </nav>
-
-            <div class="nav-cta">
-                <a href="https://wa.me/628563020305?text=Halo%20Webimanta,%20saya%20ingin%20berkonsultasi%20mengenai%20solusi%20digital%20bisnis%20saya."
-                    target="_blank" class="btn btn-primary btn-sm">Konsultasi Sekarang</a>
-            </div>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu Navigation">
                 <span></span>
