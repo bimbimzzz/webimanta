@@ -278,6 +278,10 @@ img, svg {
     display: block;
 }
 
+.nav-cta-mobile {
+    display: none;
+}
+
 .menu-toggle {
     display: none;
     background: none;
@@ -688,7 +692,7 @@ img, svg {
 
 .gateway-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 2rem;
     position: relative;
     z-index: 10;
@@ -1143,6 +1147,22 @@ textarea.form-control {
     }
 }
 
+/* --- MAP WRAPPER --- */
+.map-wrapper {
+    margin-top: 3rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 16px;
+}
+
 /* --- RESPONSIVE LAYOUTS --- */
 @media (max-width: 1024px) {
     .hero-title {
@@ -1236,6 +1256,62 @@ textarea.form-control {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+
+    .vision-mission {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+    }
+
+    .about-title {
+        font-size: 1.85rem;
+    }
+
+    .contact-info-block {
+        padding: 2rem;
+    }
+
+    .contact-form-block {
+        padding: 2rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .nav-links.active .nav-cta-mobile {
+        display: inline-flex;
+        margin-top: 1rem;
+    }
+
+    .gateway-card {
+        padding: 1.75rem;
+    }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .map-wrapper {
+        margin-top: 2rem;
+    }
+
+    .map-wrapper iframe {
+        height: 280px;
     }
 }
 
@@ -1368,5 +1444,192 @@ textarea.form-control {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+}
+
+/* --- SMALL MOBILE (576px) --- */
+@media (max-width: 576px) {
+    .section-padding {
+        padding: 3.5rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-illustration {
+        max-width: 280px;
+    }
+
+    .visual-backdrop {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-title {
+        font-size: 1.6rem;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        max-width: 100%;
+        border-radius: 0 0 12px 12px;
+        text-align: center;
+    }
+
+    .about-badge h4 {
+        font-size: 1.5rem;
+    }
+
+    .product-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-info-block {
+        padding: 1.5rem;
+    }
+
+    .contact-form-block {
+        padding: 1.5rem;
+    }
+
+    .contact-info-top h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form-block h3 {
+        font-size: 1.5rem;
+    }
+
+    .custom-dev-card {
+        padding: 1.5rem;
+    }
+
+    .custom-dev-title {
+        font-size: 1.5rem;
+    }
+
+    .custom-dev-desc {
+        font-size: 1rem;
+    }
+
+    .gateway-card {
+        padding: 1.5rem;
+    }
+
+    .gateway-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .why-card {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding: 3.5rem 0 1.5rem 0;
+    }
+
+    .footer-grid {
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .map-wrapper iframe {
+        height: 220px;
+        border-radius: 12px;
+    }
+}
+
+/* --- EXTRA SMALL MOBILE (400px) --- */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .badge-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.75rem;
+    }
+
+    .btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-sm {
+        padding: 0.45rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .product-title {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 1.45rem;
+    }
+
+    .about-title {
+        font-size: 1.45rem;
+    }
+
+    .custom-dev-title {
+        font-size: 1.35rem;
+    }
+
+    .contact-info-top h3,
+    .contact-form-block h3 {
+        font-size: 1.35rem;
+    }
+
+    .container {
+        padding: 0 0.75rem;
     }
 }

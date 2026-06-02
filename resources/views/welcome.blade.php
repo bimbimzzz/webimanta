@@ -38,16 +38,29 @@
     <script type="application/ld+json">
     {
         "@@context": "https://schema.org",
-        "@@type": "Organization",
+        "@@type": ["Organization", "ProfessionalService"],
         "name": "Webimanta Solusi Digital",
         "url": "https://webimanta.id",
         "logo": "{{ asset('images/logo.svg') }}",
-        "description": "Penyedia Jasa Pembuatan Website, Aplikasi Custom, dan Platform SaaS (HRIS, E-Ticketing, POS, Laundry, Apotek) terbaik di Indonesia.",
+        "image": "{{ asset('images/hero_dashboard.png') }}",
+        "description": "Penyedia Jasa Pembuatan Website, Aplikasi Custom, dan Platform SaaS (HRIS, E-Ticketing, POS, Laundry, Apotek) terbaik di Indonesia. Berlokasi di Semarang, Jawa Tengah.",
         "address": {
             "@@type": "PostalAddress",
+            "streetAddress": "Semarang",
             "addressLocality": "Semarang",
             "addressRegion": "Jawa Tengah",
+            "postalCode": "50000",
             "addressCountry": "ID"
+        },
+        "geo": {
+            "@@type": "GeoCoordinates",
+            "latitude": "-7.0717701",
+            "longitude": "110.4320309"
+        },
+        "hasMap": "https://maps.app.goo.gl/Gqwwp7ncG1D8oU7W6",
+        "areaServed": {
+            "@@type": "Country",
+            "name": "Indonesia"
         },
         "contactPoint": {
             "@@type": "ContactPoint",
@@ -58,7 +71,14 @@
         "sameAs": [
             "https://www.facebook.com/profile.php?id=61565691971885",
             "https://www.instagram.com/webimanta/"
-        ]
+        ],
+        "openingHoursSpecification": {
+            "@@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "priceRange": "$$"
     }
     </script>
 
@@ -83,8 +103,7 @@
                 <a href="#keunggulan" class="nav-link">Keunggulan</a>
                 <a href="#kontak" class="nav-link">Kontak</a>
                 <a href="https://wa.me/628563020305?text=Halo%20Webimanta,%20saya%20ingin%20berkonsultasi%20mengenai%20solusi%20digital%20bisnis%20saya."
-                    target="_blank" class="btn btn-primary btn-sm nav-cta-mobile"
-                    style="display: none; margin-top: 1rem;">Konsultasi Sekarang</a>
+                    target="_blank" class="btn btn-primary btn-sm nav-cta-mobile">Konsultasi Sekarang</a>
             </nav>
 
             <div class="nav-cta">
@@ -704,6 +723,19 @@
                     </form>
                 </div>
             </div>
+
+            <!-- Google Maps Embed - Lokasi Semarang, Jawa Tengah -->
+            <div class="map-wrapper">
+                <iframe
+                    src="https://maps.google.com/maps?q=Webimanta+-+Jasa+Pembuatan+Website+%26+Aplikasi+Semarang&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="350"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Lokasi Webimanta Solusi Digital - Semarang, Jawa Tengah, Indonesia">
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -809,8 +841,8 @@
             <div class="footer-bottom">
                 <p class="copyright">&copy; 2026 Webimanta Solusi Digital. Hak Cipta Dilindungi Undang-Undang.</p>
                 <div class="footer-bottom-links">
-                    <a href="#" class="footer-bottom-link">Kebijakan Privasi</a>
-                    <a href="#" class="footer-bottom-link">Syarat & Ketentuan</a>
+                    <a href="{{ route('privacy') }}" class="footer-bottom-link">Kebijakan Privasi</a>
+                    <a href="{{ route('terms') }}" class="footer-bottom-link">Syarat & Ketentuan</a>
                 </div>
             </div>
         </div>
@@ -844,16 +876,11 @@
             // Mobile Menu Toggle
             const menuToggle = document.getElementById('menuToggle');
             const navLinks = document.getElementById('navLinks');
-            const mobileCta = document.querySelector('.nav-cta-mobile');
 
             if (menuToggle && navLinks) {
                 menuToggle.addEventListener('click', function() {
                     menuToggle.classList.toggle('active');
                     navLinks.classList.toggle('active');
-                    if (mobileCta) {
-                        mobileCta.style.display = navLinks.classList.contains('active') ? 'inline-flex' :
-                            'none';
-                    }
                 });
 
                 // Close menu when clicking link
@@ -862,9 +889,6 @@
                     link.addEventListener('click', () => {
                         menuToggle.classList.remove('active');
                         navLinks.classList.remove('active');
-                        if (mobileCta) {
-                            mobileCta.style.display = 'none';
-                        }
                     });
                 });
             }
